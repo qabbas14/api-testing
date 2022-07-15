@@ -30,7 +30,7 @@ jobs:
           command: mvn clean compile test
 
       - store_artifacts:
-          path: /target/surefire-reports
+          path: TestAutomation/target/surefire-reports
 
       - run:
           name: generate allure report
