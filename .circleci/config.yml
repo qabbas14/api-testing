@@ -27,7 +27,8 @@ jobs:
       # Then run your tests and generate report!
       - run:
           name: Run Test and Generate Report
-          command: |
+
+      command: |
           mvn clean compile test
           allure generate --clean allure-results
 
