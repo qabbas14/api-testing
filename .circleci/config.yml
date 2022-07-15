@@ -29,35 +29,35 @@ jobs:
       - checkout
       # Use mvn clean and package as the standard maven build phase
       # Download and cache dependencies
-  - run:
+      - run:
       name: Allure archive download
       command: >-
         curl -L https://github.com/allure-framework/allure2/releases/download/<<
         parameters.version >>/allure-commandline-<< parameters.version >>.zip -o
         /tmp/allure.zip
-      - run:
-          name: Archive extraction
-          command: unzip /tmp/allure.zip
-      - run:
-          name: Allure installation
-          command: sudo mv allure-<< parameters.version >> /usr/local/share/allure
-      - run:
-          name: Allure binary symlinking
-          command: sudo ln -s /usr/local/share/allure/bin/allure /usr/local/bin/allure
-      # Then run your tests and generate report!
-      - run:
-          name: Test
-          command:
-            mvn clean test
+        - run:
+            name: Archive extraction
+            command: unzip /tmp/allure.zip
+        - run:
+            name: Allure installation
+            command: sudo mv allure-<< parameters.version >> /usr/local/share/allure
+        - run:
+            name: Allure binary symlinking
+            command: sudo ln -s /usr/local/share/allure/bin/allure /usr/local/bin/allure
+        # Then run your tests and generate report!
+        - run:
+            name: Test
+            command:
+              mvn clean test
 
-      - run:
-          name: Generate Report
-          command:
-            allure generate --clean
-          when: always
+        - run:
+            name: Generate Report
+            command:
+              allure generate --clean
+            when: always
 
-      - store_artifacts:
-          path: .
+        - store_artifacts:
+            path: .
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
