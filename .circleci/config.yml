@@ -29,8 +29,6 @@ jobs:
           name: Test
           command: mvn clean compile test
 
-      - store_artifacts:
-          path: .
 
       - run:
           name: Generate allure report
