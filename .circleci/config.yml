@@ -27,14 +27,13 @@ jobs:
       # Then run your tests and generate report!
       - run:
           name: Run Test and Generate Report
-
           command: |
             mvn clean compile test
             mkdir -p allure-report
             allure generate --clean
 
       - store_artifacts:
-          path: .
+          path: allure-report
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
