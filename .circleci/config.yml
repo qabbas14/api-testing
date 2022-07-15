@@ -29,8 +29,9 @@ jobs:
           name: Test
           command: mvn clean compile test
 
-     - store_artifacts:
-         path: allureReport
+      - store_artifacts:
+          path: allureReport
+
       - run:
           name: generate allure report
           command: |
