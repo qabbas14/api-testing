@@ -33,13 +33,12 @@ jobs:
           path: target/surefire-reports
 
       - run:
-          name: generate allure report
-          command: |
+          name: Generate allure report
+          command:
             allure generate --clean
-            mkdir allureReport
 
       - store_artifacts:
-          path: allureReport
+          path: allure-report
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
