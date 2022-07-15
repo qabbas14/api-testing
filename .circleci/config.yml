@@ -34,6 +34,7 @@ jobs:
           name: Generate Report
           command:
             allure generate --clean
+          when: always
 
       - store_artifacts:
           path: .
