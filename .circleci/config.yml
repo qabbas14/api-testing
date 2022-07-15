@@ -44,6 +44,7 @@ jobs:
       - run:
           name: generate allure report
           command: |
+            mkdir scanResults
             allure generate --clean
           when: always
       - store_artifacts:
