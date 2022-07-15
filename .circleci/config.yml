@@ -30,7 +30,7 @@ jobs:
 
           command: |
             mvn clean compile test
-            allure generate --clean allure-results
+            allure generate --clean
 
       - store_artifacts:
           path: .
