@@ -44,10 +44,10 @@ jobs:
       - run:
           name: generate allure report
           command: |
-              allure generate --clean
-              allure serve allure_report
+            allure generate --clean
+          when: always
       - store_artifacts:
-          path: ~/TestAutomation/reports
+          path: /home/circleci/TestAutomation/allure-report
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
