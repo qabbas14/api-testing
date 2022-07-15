@@ -35,7 +35,7 @@ jobs:
       - run:
           name: Generate allure report
           command:
-            allure generate --clean
+            allure generate --clean allure-results
 
       - store_artifacts:
           path: allure-report
