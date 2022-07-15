@@ -30,7 +30,7 @@ jobs:
 
           command: |
             mvn clean compile test
-            mkdir allure-report
+            mkdir -p allure-report
             allure generate --clean
 
       - store_artifacts:
