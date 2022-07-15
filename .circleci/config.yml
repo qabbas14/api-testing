@@ -24,16 +24,12 @@ jobs:
       # Use mvn clean and package as the standard maven build phase
       # Download and cache dependencies
 
-      # Then run your tests!
+      # Then run your tests and generate report!
       - run:
-          name: Test
-          command: mvn clean compile test
-
-
-      - run:
-          name: Generate allure report
-          command:
-            allure generate --clean allure-results
+          name: Run Test and Generate Report
+          command: |
+          mvn clean compile test
+          allure generate --clean allure-results
 
       - store_artifacts:
           path: .
