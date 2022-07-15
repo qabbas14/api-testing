@@ -11,7 +11,6 @@
     <properties>
         <java.version>11</java.version>
         <allure-testng-version>2.13.9</allure-testng-version>
-        <aspectj.version>1.9.9.1</aspectj.version>
     </properties>
 
     <build>
@@ -21,8 +20,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.14.1</version>
                 <configuration>
-                    <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-                    </argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>suite.xml</suiteXmlFile>
                     </suiteXmlFiles>
@@ -82,12 +79,6 @@
             <artifactId>allure-testng</artifactId>
             <version>${allure-testng-version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>${aspectj.version}</version>
-        </dependency>
-
     </dependencies>
 
 </project>
