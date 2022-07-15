@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="learning-automation" verbose="1">
+    <listeners>
+        <listener class-name="testautomation.listener.TestListener"/>
+    </listeners>
+    <test name="post-tests">
+        <classes>
+            <class name="FirstTest">
+                <methods>
+                    <include name="test1FirstTest"/>
+                    <include name="test2FirstTest"/>
+                    <include name="test3FirstTest"/>
+                    <include name="test4FirstTest"/>
+                    <include name="test5FirstTest"/>
+                </methods>
+            </class>
+            <class name="SecondTest">
+                <methods>
+                    <include name="test1SecondTest"/>
+                    <include name="test2SecondTest"/>
+                    <include name="test3SecondTest"/>
+                    <include name="test4SecondTest"/>
+                    <include name="test5SecondTest"/>
+                    <include name="test6SecondTest"/>
+                    <include name="test7SecondTest"/>
+                    <include name="test8SecondTest"/>
+                </methods>
+            </class>
+            <class name="ThirdTest">
+                <methods>
+                    <include name="test1ThirdTest"/>
+                    <include name="test2ThirdTest"/>
+                    <include name="test3ThirdTest"/>
+                    <include name="test4ThirdTest"/>
+                    <include name="test5ThirdTest"/>
+                    <include name="test6ThirdTest"/>
+                    <include name="test7ThirdTest"/>
+                    <include name="test8ThirdTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
