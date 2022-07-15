@@ -44,7 +44,9 @@ jobs:
 
       - run:
           name: generate allure report
-          command: allure generate --clean
+          command: |
+              allure generate --clean
+              allure serve allure_report
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
