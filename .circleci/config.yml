@@ -28,8 +28,6 @@ jobs:
       - run:
           name: Run Test and Generate Report
           command: |
-            mvn clean compile test
-            mkdir -p allure-report
             allure generate --clean
 
       - store_artifacts:
