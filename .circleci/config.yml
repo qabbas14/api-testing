@@ -27,12 +27,12 @@ jobs:
       # Then run your tests and generate report!
       - run:
           name: Run Test
-          command: |
+          command:
             mvn clean test
      - run:
-      name:Generate Report
-      command: |
-        allure generate --clean
+          name:Generate Report
+          command:
+            allure generate --clean
 
       - store_artifacts:
           path: .
