@@ -29,8 +29,9 @@ jobs:
           name: Run Test
           command:
             mvn clean test
-     - run:
-          name:Generate Report
+
+      - run:
+          name: Generate Report
           command:
             allure generate --clean
 
