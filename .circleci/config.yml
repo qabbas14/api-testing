@@ -54,7 +54,7 @@ jobs:
       - run:
           name: Generate Report
           command:
-            allure generate --clean
+            allure generate --clean | circleci tests split --split-by=timings
           when: always
 
       - store_artifacts:
