@@ -48,8 +48,10 @@ jobs:
         # Then run your tests and generate report!
       - run:
           name: Test
-          command:
-            circleci tests glob "**/*.java" | circleci tests split --split-by=timings
+          command: |
+              TEST=$(circleci tests glob "src/__tests__/*.js" | circleci tests split --split-by=timings)
+            mvn clean test $TEST
+          
 
       - run:
           name: Generate Report
