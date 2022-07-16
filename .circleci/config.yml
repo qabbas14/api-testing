@@ -49,7 +49,7 @@ jobs:
       - run:
           name: Test
           command:
-            mvn clean test | circleci tests split --split-by=timings
+            circleci tests glob "**/*.java" | circleci tests split --split-by=timings
 
       - run:
           name: Generate Report
