@@ -50,8 +50,7 @@ jobs:
       - run:
           name: Test
           command: |
-              TEST=$(circleci tests glob "src/__tests__/*.java" | circleci tests split --split-by=timings --time-default=5s
-  )
+              TEST=$(circleci tests glob "src/__tests__/*.java" | circleci tests split --split-by=timings --time-default=5s)
               mvn clean test $TEST
           
 
