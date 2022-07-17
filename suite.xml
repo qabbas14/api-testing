@@ -5,7 +5,7 @@
     </listeners>
     <test name="post-tests">
         <classes>
-            <class name="FirstTest">
+            <class name="a.FirstTest">
                 <methods>
                     <include name="test1FirstTest"/>
                     <include name="test2FirstTest"/>
