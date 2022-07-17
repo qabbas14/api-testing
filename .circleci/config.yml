@@ -50,7 +50,7 @@ jobs:
       - run:
           name: Test
           command: |
-              TEST=$(circleci tests split < src/test)
+              TEST=$(circleci tests split < "src/test")
               mvn clean test $TEST
           
 
